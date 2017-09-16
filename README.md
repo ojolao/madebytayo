@@ -1,5 +1,32 @@
 # madebytayo
 
-install
-
-the `npm install` command can be used to install all dependencies.
+Welcome.
+ 
+ 
+ 
+Usage
+---
+ 
+Start the development server with this command:
+ 
+```
+npm start
+```
+ 
+ 
+ 
+Setup
+---
+ 
+```
+npm install
+```
+ 
+ 
+ 
+Compile
+---
+ 
+```
+npm run compile
+```
