@@ -1,5 +1,6 @@
 const express = require('express');
 const webpackDevMiddleware = require('webpack-dev-middleware');
+const bodyParser = require('body-parser');
 const webpack = require('webpack');
 const webpackConfig = require('../webpack.config.js');
 const app = express();
@@ -7,6 +8,8 @@ const app = express();
 const compiler = webpack(webpackConfig);
 
 app.use(express.static(__dirname + '/../react-client/dist'));
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({ extended: true }));
 
 app.use(webpackDevMiddleware(compiler, {
   hot: true,

@@ -5,7 +5,7 @@ const DIST_DIR = path.join(__dirname, '/react-client/dist');
 module.exports = {
   context: path.join(__dirname, '/react-client/src'),
   entry: [
-    './main.js',
+    './main.jsx',
   ],
   output: {
     path: DIST_DIR,
@@ -14,7 +14,8 @@ module.exports = {
   module: {
     rules: [
       {
-        test: /\.js$/,
+        test: /\.jsx$/,
+        include: SRC_DIR,
         exclude: /node_modules/,
         use: [
           'babel-loader',
